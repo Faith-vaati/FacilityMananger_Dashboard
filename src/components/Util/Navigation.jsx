@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import {
-  faClock,
+  faBuilding,
+  faCoins,
   faHome,
+  faHouseUser,
   faMap,
-  faRightToBracket,
+  faPeoplePulling,
   faTools,
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
@@ -114,7 +116,7 @@ export default function Navigation(props) {
         txt="Properties"
         link="properties"
         active={pathname[1]}
-        icon={faClock}
+        icon={faBuilding}
         url="/properties"
         options={[]}
         showing={props.showing}
@@ -123,7 +125,7 @@ export default function Navigation(props) {
         txt="Tenants"
         link="tenants"
         active={pathname[1]}
-        icon={faClock}
+        icon={faHouseUser}
         url="/tenants"
         options={[]}
         showing={props.showing}
@@ -132,7 +134,7 @@ export default function Navigation(props) {
         txt="Assets"
         link="assets"
         active={pathname[1]}
-        icon={faClock}
+        icon={faCoins}
         url="/assets"
         options={[]}
         showing={props.showing}
@@ -141,7 +143,7 @@ export default function Navigation(props) {
         txt="Workforce"
         link="workforce"
         active={pathname[1]}
-        icon={faClock}
+        icon={faPeoplePulling}
         url="/workforce"
         options={[]}
         showing={props.showing}
@@ -165,29 +167,6 @@ export default function Navigation(props) {
         options={[]}
         showing={props.showing}
       />
-      <div className="contactdev">
-        <div className="line-container">
-          <div className="circle-point start-point"></div>
-          <div className="circle-point end-point"></div>
-        </div>
-
-        <div className="div3equal">
-          <img src={person} height={50} width={50} alt="Contact Developer" />
-          <div>
-            <h4>{currentUser.Name}</h4>
-            <p>{currentUser.Email}</p>
-          </div>
-          <FontAwesomeIcon
-            onClick={() => {
-              localStorage.clear();
-              window.location.href = "/login";
-            }}
-            icon={faRightToBracket}
-            color="gray"
-            style={{ cursor: "pointer" }}
-          />
-        </div>
-      </div>
     </div>
   );
 };
