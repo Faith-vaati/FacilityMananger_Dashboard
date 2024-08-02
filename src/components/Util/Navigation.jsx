@@ -94,9 +94,9 @@ export default function Navigation(props) {
         </div>
       </div>
       <div className="line-container">
-          <div className="circle-point start-point"></div>
-          <div className="circle-point end-point"></div>
-        </div>
+        <div className="circle-point start-point"></div>
+        <div className="circle-point end-point"></div>
+      </div>
       <Item
         url="/"
         txt="Dashboard"
@@ -116,50 +116,41 @@ export default function Navigation(props) {
         showing={props.showing}
       />
       <Item
-        txt="Agrodealers"
-        link="agrodealers"
-        active={pathname[1]}
-        icon={faHandHoldingDollar}
-        url="/agrodealers"
-        options={[]}
-        showing={props.showing}
-      />
-      <Item
-        txt="AgroProducts"
-        link="products"
-        active={pathname[1]}
-        icon={faBagShopping}
-        url="/products"
-        options={[]}
-        showing={props.showing}
-      />
-      <Item
-        txt="Farmers"
-        link="farmers"
-        active={pathname[1]}
-        icon={faFolder}
-        url="/farmers"
-        options={[]}
-        showing={props.showing}
-      />
-      <Item
-        txt="Farmproduce"
-        link="farmproduce"
-        active={pathname[1]}
-        icon={faBagShopping}
-        url="/farmproduce"
-        options={[]}
-        showing={props.showing}
-      />
-      <Item
-        txt="Orders"
-        link="orders"
+        txt="Properties"
+        link="properties"
         active={pathname[1]}
         icon={faClock}
-        url="/orders"
+        url="/properties"
         options={[]}
         showing={props.showing}
-      />            
+      />
+      <Item
+        txt="Tenants"
+        link="tenants"
+        active={pathname[1]}
+        icon={faClock}
+        url="/tenants"
+        options={[]}
+        showing={props.showing}
+      />
+      <Item
+        txt="Assets"
+        link="assets"
+        active={pathname[1]}
+        icon={faClock}
+        url="/assets"
+        options={[]}
+        showing={props.showing}
+      />
+      <Item
+        txt="Workforce"
+        link="workforce"
+        active={pathname[1]}
+        icon={faClock}
+        url="/workforce"
+        options={[]}
+        showing={props.showing}
+      />
       <Item
         txt="Users"
         active={pathname[1]}

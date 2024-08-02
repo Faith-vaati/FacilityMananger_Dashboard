@@ -3,12 +3,11 @@ import "../Styles/home.scss";
 import Navigation from "../components/Util/Navigation";
 import UserHome from "../components/Users/UserHome";
 import HomeGis from "../components/GIS/HomeGis";
-import Agrodealers from "../components/DataTables/Agrodealers/AgrodealersList";
-import FarmersList from "../components/DataTables/Farmers/FarmersList";
-import NewStats from "../components/Stats/NewStats";
-import Products from "../components/DataTables/ProductsList";
-import FarmProduceList from "../components/DataTables/FarmProduceList";
-import FarmerDetails from "../components/DataTables/Farmers/FarmerDetails";
+import Properties from "../components/Property Control/Properties";
+import Tenants from "../components/Tenants/Tenants";
+import Assets from "../components/Asset Manangement/Assets";
+import Workforce from "../components/Workforce Manangement/Workforce";
+import Landing from "../components/Dashboard/Landing";
 
 export default function Home(props) {
   const [showing, setShowing] = useState(true);
@@ -37,13 +36,12 @@ export default function Home(props) {
         </div>
         <div className="right_panel">
           <div className="full">
-            {pathname[1] === "" && <NewStats />}
+            {pathname[1] === "" && <Landing />}
             {pathname[1] === "gis" && <HomeGis />}
-            {pathname[1] === "agrodealers" && <Agrodealers />}
-            {pathname[1] === "products" && <Products />}
-            {pathname[1] === "farmproduce" && <FarmProduceList />}
-            {pathname[1] === "farmers" && <FarmersList />}
-            {pathname[1] === "farmer" && <FarmerDetails />}
+            {pathname[1] === "property" && <Properties />}
+            {pathname[1] === "tenants" && <Tenants />}
+            {pathname[1] === "assets" && <Assets />}
+            {pathname[1] === "workforce" && <Workforce />}
             {pathname[1] === "users" && <UserHome showing={showing} />}
           </div>
         </div>
