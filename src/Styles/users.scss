@@ -173,7 +173,7 @@
           h6 {
             font-size: small;
             padding: 5px 10px;
-            background-color: $bg1;
+            background-color: $white;
             cursor: pointer;
             text-align: center;
             color: $secondary;
@@ -301,7 +301,7 @@
           border-radius: 5px;
           font-size: small;
           margin-top: 10px;
-          background-color: $bg1;
+          background-color: $white;
         }
         input:focus {
           border-bottom: 2px solid $primary;
@@ -329,7 +329,7 @@
           border-radius: 5px;
           font-size: small;
           margin-top: 10px;
-          background-color: $bg1;
+          background-color: $white;
         }
         select:focus {
           border-bottom: 2px solid $primary;

@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from "react";
 import {
   faClock,
-  faFolder,
-  faHandHoldingDollar,
   faHome,
   faMap,
   faRightToBracket,
   faTools,
   faUsers,
-  faBagShopping,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import logo from "../../assets/images/Ag.png";
 import person from "../../assets/images/person.jpg";
 
 export default function Navigation(props) {
@@ -87,9 +83,8 @@ export default function Navigation(props) {
       className="navigation"
     >
       <div className="logo">
-        <img src={logo} alt="" />
         <div>
-          <h4>AgroDealers</h4>
+          <h4>FMS</h4>
           <h4>Dashboard</h4>
         </div>
       </div>

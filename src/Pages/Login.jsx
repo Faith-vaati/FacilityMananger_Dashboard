@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import "../Styles/login.scss";
 import bg from "../assets/images/login.png";
-import logo from "../assets/images/logo.webp";
+import logo from "../assets/images/logo.png";
 import Input from "../components/Users/UserInput";
 import Button from "../components/Util/Button";
 import ForgetPassword from "../components/Login/ForgetPassword";
