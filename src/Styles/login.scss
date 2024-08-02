@@ -1,0 +1,200 @@
+@import "./mediaquery";
+@import "./variables";
+
+.lg-container {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .left {
+    img {
+      width: 100%;
+    }
+  }
+  .right {
+    width: 100%;
+    background-color: white;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+
+    .body {
+      padding: 2em;
+
+      .head {
+        margin-top: 5em;
+      }
+
+      h6 {
+        color: orangered;
+        margin: 1em 0;
+        text-align: center;
+      }
+
+      h2 {
+        color: $primary;
+        font-size: 1.5em;
+        font-weight: 600;
+        margin: 1em 0;
+      }
+      p {
+        margin: 1em 0;
+        font-size: small;
+        span {
+          color: $accent;
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+
+      input {
+        border: 1px solid $primary;
+        color: $primary;
+
+        &:focus {
+          border: 1px solid $secondary;
+        }
+        &::placeholder {
+          color: $primary;
+        }
+      }
+
+      .button {
+        background-color: $secondary;
+        width: 25vh;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        margin: 2em 0;
+        padding: 1em 2em;
+        cursor: pointer;
+        transition: 0.3s;
+        font-weight: bold;
+
+        &:hover {
+          background-color: $accent;
+        }
+      }
+    }
+  }
+
+  .contain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+
+    .card1 {
+      background-color: white;
+      border-radius: 8px;
+      padding: 1em 1em 1em 1em;
+      margin: 0 auto 0 auto;
+      color: #000000;
+      max-width: 400px;
+      max-height: 90vh;
+      width: 100%;
+      position: relative;
+      overflow-y: scroll;
+
+      .title {
+        .msg {
+          text-align: center;
+          color: green;
+          font-size: 16px;
+        }
+        .err {
+          text-align: center;
+          color: red;
+          font-size: 16px;
+        }
+      }
+      h3 {
+        font-size: large;
+        margin: 10px 0 10px 0;
+        text-align: center;
+      }
+      .body {
+        form {
+          textarea {
+            resize: none;
+            width: 100%;
+            margin: auto;
+            padding: 4px;
+            font-size: 18px;
+          }
+          label {
+            display: block;
+            font-size: medium;
+            margin: 10px 0 10px 0;
+          }
+          input {
+            width: 100%;
+            background-color: transparent;
+            border-radius: 4px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 400;
+            font-size: small;
+            padding: 5px;
+            color: black;
+            border: 1px solid $primary;
+            cursor: pointer;
+            display: block;
+            margin: 10px auto 10px auto;
+
+            &:focus {
+              border: 1px solid $accent;
+            }
+          }
+        }
+      }
+      p {
+        font-size: 12px;
+        margin: 10px 0 10px 10px;
+
+        span {
+          color: #74465c;
+          cursor: pointer;
+        }
+      }
+
+      h4 {
+        color: #d01c1c;
+        height: 14px;
+        font-size: 12px;
+        line-height: 14px;
+        display: block;
+        text-align: center;
+        margin: 10px 0 10px 0;
+        cursor: pointer;
+      }
+      .submit {
+        background-color: $primary;
+        width: 50%;
+        min-width: 150px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: small;
+        padding: 5px;
+        text-align: center;
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+        display: block;
+        margin: 1em auto 1em auto;
+      }
+      button:hover {
+        background-color: $accent;
+      }
+    }
+  }
+}

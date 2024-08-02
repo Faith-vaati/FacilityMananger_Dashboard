@@ -1,0 +1,119 @@
+@import "./mediaquery";
+@import "./variables";
+
+.userhome {
+  padding: 1em;
+  height: 100% !important;
+  overflow-y: auto;
+
+  .vtop {
+    border-radius: 5px 5px 0 0;
+    background-color: white;
+    box-shadow: 1px 1px 5px #60606030;
+    margin-bottom: 1px;
+    z-index: 99;
+
+    .filter {
+      position: absolute;
+      top: 58px;
+      right: 10px;
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      width: fit-content;
+      width: -moz-fit-content;
+      gap: 1em;
+      margin: auto 0 auto 0;
+
+      .select {
+        height: fit-content;
+        margin: auto;
+        color: $primary;
+        background-color: $bg1;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px #60606030;
+
+        select {
+          border: none;
+          color: $primary;
+        }
+
+        select:focus {
+          border-bottom: none !important;
+        }
+      }
+
+      button {
+        height: fit-content;
+        background-color: $bg1;
+        color: $secondary;
+        padding: 5px;
+        cursor: pointer;
+        display: block;
+        margin: auto;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px #60606030;
+      }
+
+      button:hover {
+        background-color: $primary;
+        color: white;
+      }
+
+      .active {
+        background-color: $primary;
+        color: white;
+      }
+
+      label {
+        color: $secondary;
+        margin-bottom: 5px;
+        font-size: small;
+      }
+
+      input {
+        padding: 8px;
+        background-color: $primary;
+        border-radius: 5px;
+        border: 1px solid $primary;
+        color: white;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: fit-content;
+    }
+    .vitem {
+      h4 {
+        cursor: pointer;
+        padding: 10px 1em;
+        font-weight: 520;
+        font-size: small;
+        color: $primary;
+        text-align: center;
+      }
+      h4:hover {
+        color: $primary;
+        background-color: #feece2;
+        box-shadow: 1px 1px 5px #60606030;
+      }
+    }
+    .vactive {
+      h4 {
+        cursor: pointer;
+        padding: 10px 1em;
+        font-weight: 520;
+        font-size: small;
+        color: $primary;
+        text-align: center;
+        color: $primary;
+        background-color: #feece2;
+        box-shadow: 1px 1px 5px #60606030;
+      }
+    }
+  }
+}
