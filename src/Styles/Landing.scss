@@ -1,6 +1,88 @@
 @import "_variables.scss";
-.landing{
-    width: 100%;
+
+.landing {
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+
+  .top-sect {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100%;
-    background-color: $white;
+
+  .top-sect_1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: $dark-blue;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: auto auto 2rem 2rem;
+    &-icon {
+    margin-right: 1rem;
+    
+  }
+  &-name {
+    flex: 1;
+  }
+  }
+
+
+  .top-sect_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: bolder;
+    font-size: 3rem;
+
+    &-1 {
+      color: $accent;
+    }
+    &-2 {
+      color: $primary;
+      &-currency {
+        color: $dark-blue;
+      }
+    }
+    &-3 {
+      color: $red;
+    }
+    &-4 {
+      color: $dark-blue;
+    }
+  }
+
+  .top-sect_3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin: 2rem auto 0 2rem;
+
+     &-icon {
+    margin-right: 1rem;
+    color: $dark-blue;
+    .arrow {
+      color: $primary;
+    }
+  }
+  &-name {
+    flex: 1;
+    color: $dark-blue;
+    .p-color {
+      color: $primary;
+    }
+  }
+  }
+  .last-two {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+
 }
