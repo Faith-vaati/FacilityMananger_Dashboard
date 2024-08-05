@@ -11,78 +11,128 @@
     justify-content: space-between;
     height: 100%;
 
-  .top-sect_1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: $dark-blue;
-    font-size: 2rem;
-    font-weight: bold;
-    margin: auto auto 2rem 2rem;
-    &-icon {
-    margin-right: 1rem;
-    
-  }
-  &-name {
-    flex: 1;
-  }
-  }
-
-
-  .top-sect_2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    font-weight: bolder;
-    font-size: 3rem;
-
-    &-1 {
-      color: $accent;
+    .top-sect_1 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: $dark-blue;
+      font-size: 2rem;
+      font-weight: bold;
+      margin: auto auto 2rem 2rem;
+      &-icon {
+        margin-right: 1rem;
+      }
+      &-name {
+        flex: 1;
+      }
     }
-    &-2 {
-      color: $primary;
-      &-currency {
+
+    .top-sect_2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      font-weight: bolder;
+      font-size: 3rem;
+
+      &-1 {
+        color: $accent;
+      }
+      &-2 {
+        color: $primary;
+        &-currency {
+          color: $dark-blue;
+        }
+      }
+      &-3 {
+        color: $red;
+      }
+      &-4 {
         color: $dark-blue;
       }
     }
-    &-3 {
-      color: $red;
+
+    .top-sect_3 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      margin: 2rem auto 0 2rem;
+
+      &-icon {
+        margin-right: 1rem;
+        color: $dark-blue;
+        .arrow {
+          color: $primary;
+        }
+      }
+      &-name {
+        flex: 1;
+        color: $dark-blue;
+        .p-color {
+          color: $primary;
+        }
+      }
     }
-    &-4 {
-      color: $dark-blue;
+    .last-two {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
     }
   }
 
-  .top-sect_3 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    margin: 2rem auto 0 2rem;
+  .chart-sect {
+    max-width: $grid-width;
+    background-color: $white;
+    border: 1px solid $line;
+    border-radius: 0.5rem;
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding: 1rem;
 
-     &-icon {
-    margin-right: 1rem;
-    color: $dark-blue;
-    .arrow {
-      color: $primary;
+    &-top {
+      display: grid;
+      grid-template-columns: 3fr 0.5fr auto;
+      gap: 1rem;
+      align-items: center;
+      padding-bottom: 1em;
+
+      &_title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $dark-blue;
+      }
+
+      [class$="right"] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      &_export-right {
+        font-weight: bold;
+        color: $white;
+        background-color: $primary;
+        gap: 2rem;
+        padding: 1rem;
+      }
+      &_filter-right {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $dark-blue;
+      }
+    }
+
+    &-graph {
+      width: 100%; /* Ensure the chart container takes up the full width of its parent */
+      max-width: 100%; /* Prevent the chart from exceeding its container */
+      box-sizing: border-box; /* Include padding and border in the element’s total width */
+      padding: 0; /* Remove any default padding */
+      margin: 0; /* Remove any default margin */
     }
   }
-  &-name {
-    flex: 1;
-    color: $dark-blue;
-    .p-color {
-      color: $primary;
-    }
-  }
-  }
-  .last-two {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-}
-
-
 }
