@@ -2,12 +2,18 @@ import React from "react";
 import { LineChart, Line, XAxis, YAxis, Tooltip } from "recharts";
 
 const data = [
-  { name: "1", value: 2 },
-  { name: "2", value: 5.5 },
-  { name: "3", value: 2 },
-  { name: "4", value: 8.5 },
-  { name: "5", value: 1.5 },
-  { name: "6", value: 5 },
+  { name: "Jan", value: 140 },
+  { name: "Feb", value: 150 },
+  { name: "March", value: 220 },
+  { name: "April", value: 110 },
+  { name: "May", value: 170 },
+  { name: "June", value: 140 },
+  { name: "July", value: 180 },
+  { name: "Aug", value: 170},
+  { name: "Sep", value: 160 },
+  { name: "Oct", value: 230},
+  { name: "Nov", value: 165 },
+  { name: "Dec", value: 240 },
 ];
 
 const CustomLineChart = () => {

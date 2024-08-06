@@ -38,13 +38,13 @@
   
 .grid-row {
   max-width: $grid-width;
-  background-color: #eee;
+  background-color: $white;
   margin: 0 auto;
 
   @include clearfix;
 
   [class^="col-"] {
-    background-color: $primary;
+    background-color: $white;
     float: left;
     position: relative;
 
