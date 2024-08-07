@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../../Styles/Landing.scss";
+import "../../Styles/landing.scss";
 import "../../Styles/_grid.scss";
 import CustomLineChart from "./CustomLineChart";
 import CustomDoughnutChart from "./CustomDoughnutChart";

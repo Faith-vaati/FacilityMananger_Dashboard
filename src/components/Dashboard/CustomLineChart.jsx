@@ -1,5 +1,27 @@
 import React from "react";
-import { LineChart, Line, XAxis, YAxis, Tooltip } from "recharts";
+import { Line } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  scales,
+  Filler,
+} from "chart.js";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 const data = [
   { name: "Jan", value: 140 },
@@ -9,28 +31,52 @@ const data = [
   { name: "May", value: 170 },
   { name: "June", value: 140 },
   { name: "July", value: 180 },
-  { name: "Aug", value: 170},
+  { name: "Aug", value: 170 },
   { name: "Sep", value: 160 },
-  { name: "Oct", value: 230},
+  { name: "Oct", value: 230 },
   { name: "Nov", value: 165 },
   { name: "Dec", value: 240 },
 ];
 
+const labels = data.map((d) => d.name);
+const values = data.map((d) => d.value);
+
+const chartData = {
+  labels: labels,
+  datasets: [
+    {
+      label: "Monthly Values",
+      data: values,
+      borderColor: "rgba(75, 192, 192, 1)",
+      backgroundColor: "rgba(26, 174, 159, 1)",
+      borderWidth: 1,
+      fill: true, //not working
+      tension: 0.4,
+    },
+  ],
+};
+
+const chartOptions = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: "top",
+    },
+    tooltip: {
+      callbacks: {
+        label: function (tooltipItem) {
+          return `Value: ${tooltipItem.raw}`;
+        },
+      },
+    },
+  },
+};
+
 const CustomLineChart = () => {
   return (
-    <LineChart width={1140} height={300} data={data}>
-      <Line type="monotone" dataKey="value" stroke="#0CB566" />
-      <XAxis
-        dataKey="name"
-        axisLine={{ stroke: "#0298C8" }}
-        tickLine={{ stroke: "#0298C8" }}
-      />
-      <YAxis
-        axisLine={{ stroke: "#0298C8" }}
-        tickLine={{ stroke: "#0298C8" }}
-      />
-      <Tooltip />
-    </LineChart>
+    <div>
+      <Line data={chartData} options={chartOptions} />
+    </div>
   );
 };
 

@@ -38,7 +38,7 @@ export default function Home(props) {
           <div className="full">
             {pathname[1] === "" && <Landing />}
             {pathname[1] === "gis" && <HomeGis />}
-            {pathname[1] === "property" && <Properties />}
+            {pathname[1] === "properties" && <Properties />}
             {pathname[1] === "tenants" && <Tenants />}
             {pathname[1] === "assets" && <Assets />}
             {pathname[1] === "workforce" && <Workforce />}
