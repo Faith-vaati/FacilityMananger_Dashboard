@@ -9,7 +9,6 @@ import {
   Title,
   Tooltip,
   Legend,
-  scales,
   Filler,
 } from "chart.js";
 
@@ -18,6 +17,7 @@ ChartJS.register(
   LinearScale,
   PointElement,
   LineElement,
+  Filler,
   Title,
   Tooltip,
   Legend
@@ -48,9 +48,9 @@ const chartData = {
       label: "Monthly Values",
       data: values,
       borderColor: "rgba(75, 192, 192, 1)",
-      backgroundColor: "rgba(26, 174, 159, 1)",
+      backgroundColor: "rgba(26, 174, 159, 0.1)",
       borderWidth: 1,
-      fill: true, //not working
+      fill: true,
       tension: 0.4,
     },
   ],
