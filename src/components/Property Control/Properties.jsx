@@ -1,12 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../Styles/properties.scss";
-import b1 from "../../assets/images/b1.jpg";
+import PropertyGrid from "../Property Control/PropertyGrid";
+
 import {
   faAdd,
   faArrowDown,
-  faCogs,
   faList,
-  faLocation,
   faSearch,
   faTable,
   faUser,
@@ -56,26 +55,7 @@ export default function Properties() {
           <FontAwesomeIcon className="list" icon={faList} />
           <FontAwesomeIcon className="grid" icon={faTable} />
         </div>
-        <div className="display__grid">
-          <div className="grid__column">
-            <p className="grid__column--image">
-              <img src={b1} alt="property" />
-            </p>
-            <p className="grid__column--name">Property Name</p>
-            <p className="grid__column--type">Property Type</p>
-            <p className="grid__column--address">
-              <FontAwesomeIcon className="location" icon={faLocation} />
-              Address
-            </p>
-            <p className="grid__column--occupants">
-              <span className="number">1000</span>  Occupants
-            </p>
-            <p className="grid__column--manage">
-                <FontAwesomeIcon className="settings" icon={faCogs} />
-                Manage Assets
-            </p>
-          </div>
-        </div>
+        < PropertyGrid />
       </div>
     </div>
   );
