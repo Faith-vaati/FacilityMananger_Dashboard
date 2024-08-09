@@ -1,0 +1,70 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.tenants {
+  max-width: $grid-width;
+  width: 100%;
+  background-color: $white;
+  margin: 1rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  border: 1px solid $line;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  flex-direction: column;
+  gap: 1rem;
+
+  .top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 6fr;
+    border: 2px solid red;
+    position: relative;
+    width: 80%;
+    margin: 1rem auto;
+
+    .add {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .search {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .filter {
+      border: 2px solid blue;
+      position: absolute;
+      right: 0;
+      display: flex;
+      gap: 1rem;
+
+      .month {
+        display: flex;
+        gap: 0.2rem;
+      }
+    }
+  }
+
+  .title {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .list {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+
+    &__top {
+      display: grid;
+      grid-template-columns: 0.5fr repeat(6, 1fr);
+    }
+     &__content{
+      display: grid;
+      grid-template-columns: 0.5fr repeat(6, 1fr);
+    }
+  }
+}
